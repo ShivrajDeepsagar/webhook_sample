@@ -1,24 +1,31 @@
 # README
+Steps to run the app:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Git clone: git@github.com:ShivrajDeepsagar/webhook_sample.git
 
-Things you may want to cover:
+cd webhook_sample
 
-* Ruby version
+run bundle install
 
-* System dependencies
+run rake db:migrate
 
-* Configuration
+run the rails app by doing rails s
 
-* Database creation
+To test the webook post request open postman and paste
 
-* Database initialization
+http://localhost:3000/webhooks  it would be a POST request
 
-* How to run the test suite
+sample payload
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+{
+  "webhook": {
+    "url": "https://example.com/webhook-endpoint",
+    "payload": {
+      "key1": "value1",
+      "key2": "value2"
+    }
+  }
+}
 
-* ...
+Thirdparty api : POSTMAN ECHO
